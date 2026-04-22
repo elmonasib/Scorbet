@@ -277,7 +277,7 @@ footer {
     }
 
     main {
-        padding: 10px 30px !important; /* إلغاء أي بادينج جانبي قد يسبب الإزاحة */
+        padding: 10px 10px !important; /* إلغاء أي بادينج جانبي قد يسبب الإزاحة */
         display: block !important; /* تغيير من flex إلى block للتبسيط */
     }
 
