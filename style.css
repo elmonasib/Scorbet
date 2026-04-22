@@ -146,19 +146,19 @@ main {
 /* تنسيق الفريق والشعار داخل البطاقة */
 .team {
     text-align: center;
-    width: 30%;
+    width: 20%;
 }
 
 .team img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     display: block;
-    margin: 0 auto 8px;
+    margin: 0 auto 6px;
     object-fit: contain;
 }
 
 .team span {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -168,7 +168,7 @@ main {
 }
 
 .match-time {
-    font-size: 1.3rem;
+    font-size: 0.80rem;
     font-weight: bold;
     display: block;
     color: #FACC15;
@@ -334,6 +334,19 @@ footer {
         margin-bottom: 4px;
     }
 
+    .team span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.team img {
+    width: 26px !important;
+    height: 26px !important;
+    object-fit: contain !important;
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+}
+
     /* التحكم في نص التوقع (مثل Home Win) */
     .prediction-tag strong {
         font-size: 10px;    /* 4. حجم خط التوقع الأساسي */
@@ -341,7 +354,7 @@ footer {
         line-height: 1;     /* تقليل المسافة العمودية بين الأسطر */
     }
 }
-}
+
 
 /* --- منع تمدد الصور بشكل عام --- */
 img {
@@ -383,11 +396,16 @@ img {
 }
 
 .team img {
-    width: 40px !important;
-    height: 40px !important;
+    width: 30px !important;
+    height: 30px !important;
     object-fit: contain !important;
     margin: 0 auto 8px auto !important;
     display: block !important;
+}
+
+.team span {
+    font-size: px;
+    font-weight: 500;
 }
 
 /* --- وضع الحاسوب: تقليص العرض لزيادة الفراغ الجانبي --- */
