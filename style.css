@@ -1,0 +1,421 @@
+/* إعدادات الموقع العامة بنمط الـ Dark Web */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* خلفية الموقع الداكنة */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* تنسيق الهيدر */
+header {
+    background-color: #0A0C0B; /* اللون المطلوب */
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+/* شعار SCORBET */
+.logo {
+    color: #FACC15; /* اللون المطلوب للشعار */
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* روابط الهيدر */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #ffffff; /* روابط بيضاء */
+    text-decoration: none;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* تحول الروابط عند التحويم */
+.nav-links li a:hover {
+    color: #FACC15; /* تتحول للأصفر */
+    border-bottom: 2px solid #FACC15; /* ظهور الشرطة */
+}
+
+/* منطقة المحتوى الرئيسية */
+main {
+    flex: 1;
+    padding: 5px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* تحديث حاوية أزرار الأقسام لتتطابق مع عرض البطاقات */
+.tabs-container {
+    display: flex;
+    gap: 0; /* سنلغي الفجوات لاستخدام التوزيع المتساوي */
+    margin-bottom: 30px;
+    background: #0A0C0B;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid #1f1f1f;
+    width: 100%; /* العرض الكامل */
+    max-width: 850px; /* نفس عرض بطاقات المباريات تماماً */
+    box-sizing: border-box; /* لضمان عدم خروج الإطار عن العرض المحدد */
+}
+
+/* جعل كل زر يأخذ مساحة متساوية */
+.tab-btn {
+    flex: 1; /* هذا السطر سيجعل الأزرار الثلاثة بنفس العرض وتملأ الحاوية */
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    padding: 12px 0;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.tab-btn.active {
+    background-color: #FACC15;
+    color: #0A0C0B;
+    font-weight: bold;
+}
+
+/* حاوية عرض المباريات */
+#content-area {
+    width: 100%;
+    max-width: 850px;
+}
+
+/* رأس الدوري (الاسم + الشعار) */
+.league-header {
+    background: #0A0C0B;
+    color: #FACC15;
+    padding: 12px 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1f1f1f;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.league-icon {
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+}
+
+.league-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* بطاقة المباراة */
+.match-card {
+    background: #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    border-left: 5px solid #FACC15; /* شريط أصفر جانبي */
+    transition: transform 0.2s;
+}
+
+.match-card:hover {
+    transform: scale(1.01);
+}
+
+/* تنسيق الفريق والشعار داخل البطاقة */
+.team {
+    text-align: center;
+    width: 30%;
+}
+
+.team img {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 0 auto 8px;
+    object-fit: contain;
+}
+
+.team span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* معلومات الوقت والتاريخ */
+.match-info {
+    text-align: center;
+}
+
+.match-time {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+    color: #FACC15;
+}
+
+.match-date {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* صندوق التوقعات (Prediction) */
+.prediction-tag {
+    background: #0A0C0B;
+    padding: 10px;
+    border: 1px solid #FACC15;
+    border-radius: 8px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.prediction-tag small {
+    font-size: 9px;
+    color: #888;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.prediction-tag strong {
+    color: #FACC15;
+    font-size: 13px;
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #0A0C0B;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #1f1f1f;
+    color: #444;
+    font-size: 14px;
+}
+/* --- إعدادات الحاوية الكبرى --- */
+.main-wrapper {
+    display: flex;
+    justify-content: center; /* يضمن بقاء كل شيء في منتصف الصفحة */
+    align-items: flex-start;
+    gap: 40px; /* مسافة واضحة بين البطاقات والإعلان */
+    width: 100%;
+    max-width: 1200px; /* سقف العرض الكلي للموقع */
+    margin: 0 auto; /* سنتر الحاوية في وسط الشاشة */
+    padding: 40px 20px; /* زيادة الفراغ العلوي والسفلي */
+}
+
+/* --- تصغير البطاقات والأقسام (في الحاسوب فقط) --- */
+.content-side {
+    /* قمنا بتقليص العرض هنا إلى 600px ليزيد الفراغ الجانبي */
+    flex: 0 0 600px; 
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* الأقسام ستتبع نفس العرض الصغير */
+.tabs-container {
+    display: flex;
+    width: 100%;
+    background: #0A0C0B;
+    padding: 5px;
+    border-radius: 12px;
+    border: 1px solid #1f1f1f;
+    margin-bottom: 25px;
+}
+
+/* البطاقات ستتبع نفس العرض الصغير */
+#content-area {
+    width: 100%;
+}
+
+/* مساحة الإعلان الجانبية */
+.sidebar-ad {
+    flex: 0 0 250px; /* العرض الثابت للإعلان */
+    position: sticky; /* لجعل العنصر يتبع المستخدم */
+    top: 20px;       /* المسافة من أعلى الشاشة عند الالتصاق */
+    height: fit-content; /* لضمان أن الحاوية لا تمتد لنهاية الصفحة وتمنع الالتصاق */
+    align-self: flex-start; /* ضروري لعمل الـ sticky داخل الـ flex */
+}
+
+/* المربع الداخلي للإعلان */
+.ad-placeholder {
+    background-color: #0A0C0B;
+    border: 1px dashed #FACC15;
+    height: 600px; /* الارتفاع الذي اخترناه مسبقاً */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    /* تصفير الحواف لجميع العناصر داخل الهاتف لمنع الإزاحة */
+    * {
+        box-sizing: border-box;
+    }
+
+    main {
+        padding: 10px 30px !important; /* إلغاء أي بادينج جانبي قد يسبب الإزاحة */
+        display: block !important; /* تغيير من flex إلى block للتبسيط */
+    }
+
+    .main-wrapper {
+        display: block !important; /* إلغاء الفليكس لتجنب مشاكل التوسيط */
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .content-side {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important; /* إلغاء الـ flex تماماً */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* توسيط المحتوى داخلياً */
+        justify-content: center;
+        margin: 0 auto !important;
+    }
+
+    .tabs-container, #content-area {
+        width: 95% !important; /* العرض الذي سيظهر في المنتصف */
+        margin: 0 auto 20px auto !important; /* هوامش تلقائية يميناً ويساراً للتوسيط الإجباري */
+        float: none !important; /* التأكد من عدم وجود تعويم */
+    }
+
+    .match-card {
+        width: 100% !important;
+        margin: 0 0 10px 0 !important; /* تصفير الهوامش الجانبية للبطاقة */
+    }
+
+    /* إخفاء الإعلان تماماً */
+    .sidebar-ad {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+}
+
+   @media (max-width: 1024px) {
+    /* التحكم في المربع نفسه */
+    .prediction-tag {
+        min-width: 70px;    /* 1. العرض: قلل هذا الرقم لتصغير المربع عرضياً */
+        max-width: 90px;    /* يمكنك وضع حد أقصى للعرض أيضاً */
+        padding: 4px 8px;   /* 2. الحشو: الرقم الأول للارتفاع، والثاني للعرض */
+        border-radius: 5px; /* انحناء الزوايا ليناسب الحجم الصغير */
+    }
+
+    /* التحكم في كلمة PREDICTION الصغيرة */
+    .prediction-tag small {
+        font-size: 8px;     /* 3. حجم الخط العلوي */
+        letter-spacing: 0;  /* تقليل المسافة بين الحروف لتوفير مساحة */
+        margin-bottom: 4px;
+    }
+
+    /* التحكم في نص التوقع (مثل Home Win) */
+    .prediction-tag strong {
+        font-size: 10px;    /* 4. حجم خط التوقع الأساسي */
+        display: block;     /* لضمان بقائه في سطر منفصل */
+        line-height: 1;     /* تقليل المسافة العمودية بين الأسطر */
+    }
+}
+}
+
+/* --- منع تمدد الصور بشكل عام --- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- تنسيق البنر الخاص (منفصل تماماً) --- */
+.special-banner {
+    width: 100%; /* سيأخذ عرض الـ 600px الخاصة بالحاوية الأب */
+    height: 160px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #1f1f1f;
+}
+
+/* استهداف حصري لصورة البنر فقط */
+.special-banner .banner-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block;
+}
+
+.banner-overlay {
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+/* --- حماية شعارات الفرق والدوريات (أحجام ثابتة) --- */
+.league-icon {
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: contain !important;
+}
+
+.team img {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: contain !important;
+    margin: 0 auto 8px auto !important;
+    display: block !important;
+}
+
+/* --- وضع الحاسوب: تقليص العرض لزيادة الفراغ الجانبي --- */
+.content-side {
+    flex: 0 0 600px; /* العرض المقلص المطلوب */
+    width: 600px;
+    margin: 0 auto;
+}
+
+/* استبدل الجزء الخاص بـ .main-wrapper بهذا الكود */
+.main-wrapper {
+    display: flex;
+    justify-content: center; /* سنبقي التوسيط الكلي */
+    align-items: flex-start;
+    gap: 20px;               /* هذه القيمة تتحكم في المسافة بين البطاقات والإعلان */
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* تعديل مهم لضمان عدم هروب الإعلان */
+.content-side {
+    flex: 0 0 600px;         /* العرض الثابت الذي طلبته */
+    width: 600px;
+    margin: 0;               /* أزلنا auto لكي لا يدفع الإعلان */
+}
+
+.sidebar-ad {
+    flex: 0 0 250px;         /* عرض الإعلان الثابت */
+    margin: 0;
+}
